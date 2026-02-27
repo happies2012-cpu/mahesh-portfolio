@@ -50,15 +50,17 @@ export function ContactSection() {
             </a>
 
             <a
-              href="tel:9845983421"
-              className="flex items-center gap-4 p-4 bg-muted/30 rounded-xl border border-border hover:border-secondary/30 transition-colors group"
+              href="https://wa.me/919845983421"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 bg-muted/30 rounded-xl border border-border hover:border-[#25D366]/30 transition-colors group"
             >
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[#25D366]/10 text-[#25D366] flex items-center justify-center group-hover:bg-[#25D366]/20 transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Mobile</p>
-                <p className="font-medium group-hover:text-secondary transition-colors">+91 98459 83421</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">WhatsApp</p>
+                <p className="font-medium group-hover:text-[#25D366] transition-colors">+91 98459 83421</p>
               </div>
             </a>
 
@@ -76,21 +78,27 @@ export function ContactSection() {
           {/* Social Links */}
           <div className="flex items-center gap-3 mt-6 pt-6 border-t border-border">
             <a
-              href="#"
+              href="https://linkedin.com/in/maheshguptha"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#0077B5]/10 text-[#0077B5] rounded-lg border border-[#0077B5]/20 hover:bg-[#0077B5]/20 transition-colors"
             >
               <Linkedin className="w-4 h-4" />
               <span className="text-sm font-medium">LinkedIn</span>
             </a>
             <a
-              href="#"
+              href="https://github.com/happies2012-cpu"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 py-3 bg-muted/50 text-foreground rounded-lg border border-border hover:border-foreground/30 transition-colors"
             >
               <Github className="w-4 h-4" />
               <span className="text-sm font-medium">GitHub</span>
             </a>
             <a
-              href="#"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 py-3 bg-primary/10 text-primary rounded-lg border border-primary/20 hover:bg-primary/20 transition-colors"
             >
               <Download className="w-4 h-4" />
@@ -102,11 +110,16 @@ export function ContactSection() {
         {/* Right - Message Form */}
         <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8">
           <h3 className="text-lg font-semibold mb-6">Send a Message</h3>
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form action="https://formsubmit.co/k.maheshguptha@gmail.com" method="POST" className="space-y-4">
+            {/* Disable FormSubmit Captcha */}
+            <input type="hidden" name="_captcha" value="false" />
+
             <div>
               <label className="text-sm text-muted-foreground mb-2 block">Your Name</label>
               <input
                 type="text"
+                name="name"
+                required
                 className="w-full px-4 py-3 bg-muted/30 border border-border rounded-lg focus:outline-none focus:border-primary/50 transition-colors"
                 placeholder="John Doe"
               />
@@ -115,6 +128,8 @@ export function ContactSection() {
               <label className="text-sm text-muted-foreground mb-2 block">Email Address</label>
               <input
                 type="email"
+                name="email"
+                required
                 className="w-full px-4 py-3 bg-muted/30 border border-border rounded-lg focus:outline-none focus:border-primary/50 transition-colors"
                 placeholder="john@example.com"
               />
@@ -122,6 +137,8 @@ export function ContactSection() {
             <div>
               <label className="text-sm text-muted-foreground mb-2 block">Message</label>
               <textarea
+                name="message"
+                required
                 rows={4}
                 className="w-full px-4 py-3 bg-muted/30 border border-border rounded-lg focus:outline-none focus:border-primary/50 transition-colors resize-none"
                 placeholder="Tell me about your project..."

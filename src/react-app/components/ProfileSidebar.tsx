@@ -38,8 +38,8 @@ export function ProfileSidebar() {
 
       {/* Contact Info */}
       <div className="space-y-2 mb-6">
-        <a 
-          href="mailto:k.maheshguptha@gmail.com" 
+        <a
+          href="mailto:k.maheshguptha@gmail.com"
           className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
         >
           <Mail className="w-4 h-4 text-primary" />
@@ -54,9 +54,9 @@ export function ProfileSidebar() {
       {/* Social Links */}
       <div className="flex items-center justify-center gap-3 mb-6">
         {[
-          { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: Github, href: "#", label: "GitHub" },
-          { icon: Phone, href: "tel:9845983421", label: "Phone" },
+          { icon: Linkedin, href: "https://linkedin.com/in/maheshguptha", label: "LinkedIn" },
+          { icon: Github, href: "https://github.com/happies2012-cpu", label: "GitHub" },
+          { icon: Phone, href: "https://wa.me/919845983421", label: "WhatsApp" },
         ].map(({ icon: Icon, href, label }) => (
           <a
             key={label}
